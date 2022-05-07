@@ -1,0 +1,20 @@
+<p>student-list works!</p>
+
+<table>
+  <th>
+    id
+  </th>
+  <th>
+    name
+  </th>
+  
+  <tr *ngFor= "let student of students">
+    <td>{{student.id}} </td>
+    <td>{{student.name}} </td>
+    
+    <td>
+      <button (click)="selectStudent(student)" [disabled]='student.isReadOnly'>Select</button>
+      <button [disabled]='student.isReadOnly'>Delete</button>
+    </td>
+  </tr>
+</table>
